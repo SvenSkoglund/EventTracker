@@ -25,11 +25,13 @@ CREATE TABLE IF NOT EXISTS `readdb`.`read_event` (
   `title` VARCHAR(45) NOT NULL,
   `author` VARCHAR(45) NULL,
   `format` ENUM('Audio', 'Text') NULL,
-  `hours` VARCHAR(45) NOT NULL,
+  `hours` DOUBLE NOT NULL,
   `is_fiction` TINYINT NOT NULL,
   `date` DATE NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `id_UNIQUE` ON `readdb`.`read_event` (`id` ASC);
 
 SET SQL_MODE = '';
 GRANT USAGE ON *.* TO readuser@localhost;
@@ -48,9 +50,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `readdb`;
-INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (1, 'Mind Illuminated', 'Culudasa', 'Audio', '1', 0, '2018-05-11');
-INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (2, 'Mind Illuminated', 'Culudasa', 'Audio', '1', 0, '2018-05-10');
-INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (3, '12 Rules for Life', 'Jordan Peterson', 'Audio', '1', 0, '2018-05-11');
-INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (4, 'Clean Code', 'Bob Martin', 'Audio', '1', 0, '2018-05-11');
+INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (1, 'Mind Illuminated', 'Culudasa', 'Audio', 1, 0, '2018-05-11');
+INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (2, 'Mind Illuminated', 'Culudasa', 'Audio', 1, 0, '2018-05-10');
+INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (3, '12 Rules for Life', 'Jordan Peterson', 'Audio', 1, 0, '2018-05-11');
+INSERT INTO `readdb`.`read_event` (`id`, `title`, `author`, `format`, `hours`, `is_fiction`, `date`) VALUES (4, 'Clean Code', 'Bob Martin', 'Audio', 1, 0, '2018-05-11');
 
 COMMIT;

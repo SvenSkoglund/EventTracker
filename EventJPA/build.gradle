@@ -61,7 +61,7 @@ dependencies {
   compile "log4j:log4j:1.2.17"
   compile "org.hibernate:hibernate-core:$hibernateVersion"
   compile "org.hibernate:hibernate-c3p0:$hibernateVersion"
-compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.5'
+compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.6.6'
 
    compile 'org.junit.jupiter:junit-jupiter-api:5.0.1'
  	testCompile('org.apiguardian:apiguardian-api:1.0.0')

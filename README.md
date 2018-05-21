@@ -5,6 +5,8 @@ This project was our first introduction to RESTful services. Using Spring Data J
 
 ## Technologies Used
 * Java
+* Javascript
+* HTML
 * Spring Data jpa
 * Spring Boot
 * RESTful services

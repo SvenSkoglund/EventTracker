@@ -66,7 +66,7 @@ public class ReadController {
 		return service.findByFormat(Format.Text);
 	}
 	@RequestMapping(path = "read/date/{date}", method = RequestMethod.GET)
-	public List<ReadEvent> findByFormatText(@PathVariable Date date) {
+	public List<ReadEvent> findByDate(@PathVariable Date date) {
 		return service.findByDate(date);
 	}
 
